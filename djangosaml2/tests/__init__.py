@@ -83,6 +83,7 @@ class SAML2Tests(TestCase):
 
             return xml_string
 
+        self.assertEqual.__self__.maxDiff = None
         self.assertEqual(remove_variable_attributes(real_xml),
                          remove_variable_attributes(expected_xmls))
 
